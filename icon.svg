@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="رمز إسلامي: مسجد وهلال ونجمة">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8c547"/>
+      <stop offset="100%" stop-color="#b8922a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#0c1014"/>
+  <!-- هلال -->
+  <circle cx="268" cy="118" r="36" fill="url(#g)"/>
+  <circle cx="288" cy="112" r="32" fill="#0c1014"/>
+  <!-- نجمة بسيطة -->
+  <path fill="url(#g)" d="M256 52l8 22h23l-18 14 7 22-20-15-20 15 7-22-18-14h23z"/>
+  <!-- مئذنة يمنى -->
+  <rect x="374" y="168" width="42" height="248" rx="10" fill="url(#g)"/>
+  <rect x="362" y="148" width="66" height="28" rx="6" fill="url(#g)"/>
+  <ellipse cx="395" cy="138" rx="22" ry="14" fill="url(#g)"/>
+  <!-- مئذنة يسرى -->
+  <rect x="96" y="168" width="42" height="248" rx="10" fill="url(#g)"/>
+  <rect x="84" y="148" width="66" height="28" rx="6" fill="url(#g)"/>
+  <ellipse cx="117" cy="138" rx="22" ry="14" fill="url(#g)"/>
+  <!-- قبة وجسم المسجد -->
+  <path d="M148 312 Q256 168 364 312 L364 396 L148 396 Z" fill="url(#g)"/>
+  <rect x="132" y="312" width="248" height="96" rx="6" fill="url(#g)"/>
+  <!-- باب مقوس -->
+  <path d="M220 408 V328 Q256 292 292 328 V408 Z" fill="#0c1014" opacity="0.85"/>
+  <!-- أرضية -->
+  <rect x="72" y="400" width="368" height="20" rx="6" fill="url(#g)" opacity="0.45"/>
+</svg>

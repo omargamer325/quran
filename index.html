@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c1014" />
+  <meta name="description" content="أذكار، صلاة على النبي ﷺ، وقرآن مع تلاوة" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="الأذكار" />
+  <title>أذكار وصلاة على النبي ﷺ</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="al-quran-quran-clipart-collection-27.webp" type="image/x-icon">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>أذكار وصلاة على النبي ﷺ</h1>
+      <p>صلاة على النبي ﷺ أعلاه. أسفلها صندوقان: <strong>القرآن الكريم</strong> أو <strong>الأذكار</strong> للتنقّل بينهما.</p>
+    </header>
+
+    <p class="section-title">الصلاة على النبي</p>
+    <article class="card featured" data-id="salawat">
+      <p class="dhikr-text">اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ</p>
+      <p class="dhikr-translation">اضغط في كل مرة ترسل بها الصلاة على النبي ﷺ</p>
+      <div class="controls">
+        <div class="target-row">
+          <label for="target-salawat">الهدف اليومي</label>
+          <input id="target-salawat" type="number" min="0" step="1" value="100" inputmode="numeric" />
+        </div>
+        <button type="button" class="btn-tap featured-btn" data-action="increment">ضغطة — صلاة على النبي</button>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-bar"><div class="progress-fill" data-progress></div></div>
+        <div class="stats">
+          <span><span class="count" data-count>0</span> <span data-goal-label>من 100</span></span>
+          <span>
+            <span class="goal-done" data-done hidden>تم الهدف — بارك الله فيك</span>
+            <button type="button" class="btn-reset" data-reset>إعادة العدّ لهذا الذكر</button>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <nav class="top-switch" role="tablist" aria-label="التنقل بين القرآن والأذكار">
+      <button type="button" class="top-switch__btn top-switch__btn--active" data-tab="quran" role="tab" id="tab-quran" aria-selected="true" aria-controls="view-quran">القرآن الكريم</button>
+      <button type="button" class="top-switch__btn" data-tab="adhkar" role="tab" id="tab-adhkar" aria-selected="false" aria-controls="view-adhkar">الأذكار</button>
+    </nav>
+
+    <div id="view-quran" class="main-view" role="tabpanel" aria-labelledby="tab-quran">
+      <p class="tilawah-lead">اختر سورةً من الصناديق؛ يظهر النص والعداد أسفلها.</p>
+      <div id="tilawah-picker"></div>
+      <div id="tilawah-panel"></div>
+    </div>
+
+    <div id="view-adhkar" class="main-view" role="tabpanel" aria-labelledby="tab-adhkar" hidden>
+      <div id="adhkar-root"></div>
+    </div>
+
+    <p class="hint">يُحفظ العدّ واختيار القارئ. الصوت: «السورة كاملة» (ملف واحد إن وُجد) أو «آية بآية» مع روابط بديلة عند الفشل؛ البسملة من الفاتحة لنفس القارئ عند الحاجة (ما عدا التوبة). اجعل الهدف 0 إن أردت العدّ بلا شريط تقدّم.</p>
+  </div>
+
+  <script src="quran-long.js"></script>
+  <script src="quran-extra-50.js"></script>
+  <script src="app.js"></script>
+  <script src="register-sw.js"></script>
+</body>
+</html>

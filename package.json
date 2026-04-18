@@ -1,0 +1,8 @@
+{
+  "name": "adhkar-quran",
+  "private": true,
+  "description": "أذكار وقرآن — تطبيق ويب قابل للتثبيت",
+  "scripts": {
+    "serve": "npx --yes serve . -l 3000"
+  }
+}
